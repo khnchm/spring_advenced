@@ -8,12 +8,15 @@ import hello.advenced.trace.template.code.AbstractTemplate;
 import hello.advenced.trace.template.code.SubClassLogic1;
 import hello.advenced.trace.template.code.SubClassLogic2;
 import lombok.extern.slf4j.Slf4j;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 @Slf4j
 class ContextV1Test {
     @Test
     void strategyV0(){
+        String test = "";
+        Assertions.assertThat(test).isNull();
         logic1();
         logic2();
     }
@@ -26,6 +29,7 @@ class ContextV1Test {
         long endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
         log.info("resultTime={}",resultTime);
+
     }
 
     private void logic2(){
@@ -40,6 +44,8 @@ class ContextV1Test {
 
     @Test
     void strategyV1(){
+        String test = "";
+        Assertions.assertThat(test).isNull();
         Strategy strategyLogic1 = new StrategyLogic1();
         ContextV1 contextV1 = new ContextV1(strategyLogic1);
         contextV1.execute();
