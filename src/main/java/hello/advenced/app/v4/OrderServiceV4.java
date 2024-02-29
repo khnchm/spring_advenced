@@ -24,15 +24,6 @@ public class OrderServiceV4 {
         };
         template.execute("OrderService.orderItem()");
 
-//        TraceStatus status = null;
-//        try{
-//            status = trace.begin("OrderService.orderItem()");
-//            orderRepository.save(itemId);
-//            trace.end(status);
-//        }catch(Exception e){
-//            trace.exception(status, e);
-//            throw e;
-//        }
     }
 
 

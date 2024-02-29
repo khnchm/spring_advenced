@@ -26,15 +26,5 @@ public class OrderControllerV4 {
         };
         return template.execute("OrderController.request()");
 
-//        TraceStatus status = null;
-//        try{
-//            status = trace.begin("OrderController.request()");
-//            orderService.orderItem(itemId);
-//            trace.end(status);
-//            return "ok";
-//        }catch(Exception e){
-//            trace.exception(status, e);
-//            throw e;
-//        }
     }
 }
